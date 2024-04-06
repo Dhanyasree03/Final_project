@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+    <style>
+        /* CSS styles for the table */
+        .content-table {
+            border-collapse: collapse;
+            width: 80%; /* Adjust width as needed */
+            margin: auto; /* Center the table */
+        }
+        .content-table th, .content-table td {
+            padding: 8px;
+            text-align: left;
+        }
+        .content-table th {
+            background-color: #f2f2f2; /* Light gray background for headers */
+        }
+        .content-table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alternate row colors */
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-container button {
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <center><b>{{message}}</b><center>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    <table border="1" class="content-table">
+        <thead>
+            <tr>
+                <th>Userid</th>
+                <th>Expenses_Name</th>
+                <th>Cost</th>
+                <th>Time</th>
+                <th>Salary</th>
+                <th>Action</th> <!-- New column for action buttons -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+                <td class="button-container">
+                    <a href="{{url_for('updateexpense',exp_name=i[1])}}"><button type="update">Update</button></a>
+                    <a href="{{url_for('deleteexpense',exp_name=i[1])}}"><button type="delete">Delete</button></a> 
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</body>
+</html>

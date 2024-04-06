@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Plotly.js CSS -->
+    <link rel="stylesheet" href="https://cdn.plot.ly/plotly.css" />
+</head>
+
+<body>
+    <h1>Dashboard</h1>
+
+    <!-- Expenses Distribution Bar Chart -->
+    <div>
+        <h2>Expenses Distribution</h2>
+        <div id="expenses-bar-chart">
+            {{ expenses_bar_chart_html|safe }}
+        </div>
+    </div>
+
+    <!-- Savings Distribution Pie Chart -->
+    <div>
+        <h2>Savings Distribution</h2>
+        <div id="savings-pie-chart">
+            {{ saving_pie_chart_html|safe }}
+        </div>
+    </div>
+
+    <!-- Income Distribution Pie Chart -->
+    <div>
+        <h2>Income Distribution</h2>
+        <div id="income-pie-chart">
+            {{ salary_pie_chart_html|safe }}
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!-- <html>
+    <head>
+        <title>Salary</title>
+    </head>
+<body>
+    <div class="container">
+        <div class="myform">
+            <form method='POST'>
+                <h2>Add Salary</h2>
+                <input type="text" placeholder="Salary" name = 'salary'>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Expenses</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+
+        body {
+            background-color: #e8edf2;
+        }
+
+        div.container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 50px 50px -50px darkslategray;
+        }
+
+        div.container div.myform {
+            width: 270px;
+            margin: 30px;
+        }
+
+        div.container div.myformh2 {
+            color: #000;
+            /*margin-bottom: 20px;*/
+        }
+
+        div.container div.myform input {
+            border: none;
+            outline: none;
+            border-radius: 0;
+            width: 100%;
+            border-bottom: 2px solid #000;
+            margin-bottom: 25px;
+            padding: 7px 0;
+            font-size: 25px;
+        }
+
+        div.container div.myform button {
+            color: white;
+            background-color: #000;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            font-size: 30px;
+            padding: 5px 12px;
+            font-weight: 500%;
+        }
+
+        div.container div.image img {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="myform">
+            <form method='POST'>
+                <h2>Update Expense</h2>
+                <input type="text" placeholder="Enter Expense" name = 'expense' value="{{existing_expense}}">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+
+</html>
